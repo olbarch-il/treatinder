@@ -1,4 +1,4 @@
-package com.treat.treatinder.service.api;
+package com.treat.treatinder.service.finder.api;
 
 import com.treat.treatinder.constants.AnimalsTypes;
 import com.treat.treatinder.model.dto.AnimalResponse;

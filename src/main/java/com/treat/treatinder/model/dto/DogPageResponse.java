@@ -12,5 +12,5 @@ import java.util.List;
 @NoArgsConstructor
 public class DogPageResponse {
     private List<Dog> dogs;
-    private Pagination pagination;
+    private PaginationResponse pagination;
 }

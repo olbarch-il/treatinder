@@ -1,6 +1,9 @@
 package com.treat.treatinder.model.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
@@ -8,6 +11,7 @@ import java.util.List;
 public class AnimalResponse {
     private List<Animal> animals;
     private Pagination pagination;
+
     @Data
     public static class Animal {
         private long id;
@@ -33,6 +37,7 @@ public class AnimalResponse {
         private String statusChangedAt;
         private String publishedAt;
         private Contact contact;
+        private Links _links;
     }
 
     @Data
@@ -93,14 +98,21 @@ public class AnimalResponse {
 
     @Data
     public static class Links {
-        private Link self;
-        private Link type;
-        private Link organization;
-
+        private Link next;
         @Data
         public static class Link {
             private String href;
         }
     }
 
+    @Data
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class Pagination {
+        @JsonProperty("count_per_page") private int countPerPage;
+        @JsonProperty("total_count")  private long totalCount;
+        @JsonProperty("current_page") private int currentPage;
+        @JsonProperty("total_pages") private int totalPages;
+        @JsonProperty("_links") private Links links;
+    }
 }
