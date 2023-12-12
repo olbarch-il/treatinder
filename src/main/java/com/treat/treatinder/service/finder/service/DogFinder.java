@@ -1,4 +1,4 @@
-package com.treat.treatinder.service.finder;
+package com.treat.treatinder.service.finder.service;
 
 import com.treat.treatinder.model.dto.DogPageResponse;
 

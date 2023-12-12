@@ -1,7 +1,7 @@
-package com.treat.treatinder.service.finder;
+package com.treat.treatinder.service.finder.controller;
 
 import com.treat.treatinder.model.dto.DogPageResponse;
-import com.treat.treatinder.service.finder.DogFinderService;
+import com.treat.treatinder.service.finder.service.DogFinderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
